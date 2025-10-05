@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             sidePanel = new Panel();
-            MainExitBtn = new Button();
             buttonLogin = new Button();
+            MainExitBtn = new Button();
             bottomPanel = new Panel();
             TopPanel = new Panel();
-            TopExitBtn = new Button();
             TopMinimizeBtn = new Button();
+            TopExitBtn = new Button();
             panelMain = new Panel();
+            lbStatus = new Label();
             sidePanel.SuspendLayout();
+            bottomPanel.SuspendLayout();
             TopPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,6 +53,25 @@
             sidePanel.Name = "sidePanel";
             sidePanel.Size = new Size(120, 800);
             sidePanel.TabIndex = 0;
+            // 
+            // buttonLogin
+            // 
+            buttonLogin.BackColor = Color.FromArgb(58, 58, 58);
+            buttonLogin.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonLogin.Dock = DockStyle.Bottom;
+            buttonLogin.FlatAppearance.BorderSize = 0;
+            buttonLogin.FlatStyle = FlatStyle.Flat;
+            buttonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            buttonLogin.ForeColor = Color.White;
+            buttonLogin.Image = Properties.Resources.AccountW;
+            buttonLogin.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonLogin.Location = new Point(0, 700);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(120, 50);
+            buttonLogin.TabIndex = 2;
+            buttonLogin.Text = "Log in";
+            buttonLogin.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonLogin.UseVisualStyleBackColor = false;
             // 
             // MainExitBtn
             // 
@@ -72,29 +93,10 @@
             MainExitBtn.UseVisualStyleBackColor = false;
             MainExitBtn.Click += MainExitBtn_Click;
             // 
-            // buttonLogin
-            // 
-            buttonLogin.BackColor = Color.FromArgb(58, 58, 58);
-            buttonLogin.BackgroundImageLayout = ImageLayout.Stretch;
-            buttonLogin.Dock = DockStyle.Bottom;
-            buttonLogin.FlatAppearance.BorderSize = 0;
-            buttonLogin.FlatStyle = FlatStyle.Flat;
-            buttonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            buttonLogin.ForeColor = Color.White;
-            buttonLogin.Image = Properties.Resources.AccountW;
-            buttonLogin.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonLogin.Location = new Point(0, 700);
-            buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(120, 50);
-            buttonLogin.TabIndex = 2;
-            buttonLogin.Text = "Log in";
-            buttonLogin.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonLogin.UseVisualStyleBackColor = false;
-
-            // 
             // bottomPanel
             // 
             bottomPanel.BackColor = Color.FromArgb(176, 176, 176);
+            bottomPanel.Controls.Add(lbStatus);
             bottomPanel.Dock = DockStyle.Bottom;
             bottomPanel.Location = new Point(120, 775);
             bottomPanel.Name = "bottomPanel";
@@ -112,6 +114,19 @@
             TopPanel.Size = new Size(1280, 25);
             TopPanel.TabIndex = 1;
             // 
+            // TopMinimizeBtn
+            // 
+            TopMinimizeBtn.Dock = DockStyle.Right;
+            TopMinimizeBtn.FlatAppearance.BorderSize = 0;
+            TopMinimizeBtn.FlatStyle = FlatStyle.Flat;
+            TopMinimizeBtn.Location = new Point(1130, 0);
+            TopMinimizeBtn.Name = "TopMinimizeBtn";
+            TopMinimizeBtn.Size = new Size(75, 25);
+            TopMinimizeBtn.TabIndex = 1;
+            TopMinimizeBtn.Text = "-";
+            TopMinimizeBtn.UseVisualStyleBackColor = true;
+            TopMinimizeBtn.Click += TopMinimizeBtn_Click;
+            // 
             // TopExitBtn
             // 
             TopExitBtn.BackColor = Color.FromArgb(244, 67, 54);
@@ -126,19 +141,6 @@
             TopExitBtn.UseVisualStyleBackColor = false;
             TopExitBtn.Click += TopExitBtn_Click;
             // 
-            // TopMinimizeBtn
-            // 
-            TopMinimizeBtn.Dock = DockStyle.Right;
-            TopMinimizeBtn.FlatAppearance.BorderSize = 0;
-            TopMinimizeBtn.FlatStyle = FlatStyle.Flat;
-            TopMinimizeBtn.Location = new Point(1130, 0);
-            TopMinimizeBtn.Name = "TopMinimizeBtn";
-            TopMinimizeBtn.Size = new Size(75, 25);
-            TopMinimizeBtn.TabIndex = 1;
-            TopMinimizeBtn.Text = "-";
-            TopMinimizeBtn.UseVisualStyleBackColor = true;
-            TopMinimizeBtn.Click += TopMinimizeBtn_Click;
-            // 
             // panelMain
             // 
             panelMain.BackColor = Color.FromArgb(47, 47, 47);
@@ -147,6 +149,15 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1280, 750);
             panelMain.TabIndex = 0;
+            // 
+            // lbStatus
+            // 
+            lbStatus.AutoSize = true;
+            lbStatus.Location = new Point(21, 3);
+            lbStatus.Name = "lbStatus";
+            lbStatus.Size = new Size(38, 15);
+            lbStatus.TabIndex = 0;
+            lbStatus.Text = "label1";
             // 
             // Main
             // 
@@ -161,6 +172,8 @@
             Name = "Main";
             Text = "Main System";
             sidePanel.ResumeLayout(false);
+            bottomPanel.ResumeLayout(false);
+            bottomPanel.PerformLayout();
             TopPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -175,5 +188,6 @@
         private Button TopMinimizeBtn;
         private Button TopExitBtn;
         private Panel panelMain;
+        private Label lbStatus;
     }
 }
