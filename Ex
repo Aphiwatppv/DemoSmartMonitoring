@@ -1,0 +1,19 @@
+System.Text.Json.JsonException: ''E' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.'
+Inner Exception
+JsonReaderException: 'E' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+
+System.Text.Json.JsonException: ''S' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.'
+JsonReaderException: 'S' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] 'E' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] 'S' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] '.' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] 'E' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] 'S' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] '.' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+[2025-10-08 22:29:47] [ERROR] The JSON value could not be converted to System.String. Path: $.m | LineNumber: 0 | BytePositionInLine: 43.
+[2025-10-08 22:29:47] [ERROR] The JSON value could not be converted to System.String. Path: $.m | LineNumber: 0 | BytePositionInLine: 44.
+[2025-10-08 22:29:47] [ERROR] The JSON value could not be converted to System.String. Path: $.m | LineNumber: 0 | BytePositionInLine: 47.
+[2025-10-08 22:29:47] [ERROR] The JSON value could not be converted to System.String. Path: $.m | LineNumber: 0 | BytePositionInLine: 47.
+[2025-10-08 22:29:47] [ERROR] The JSON value could not be converted to System.String. Path: $.m | LineNumber: 0 | BytePositionInLine: 48.
+[2025-10-08 22:29:47] [INFO] ExecFind done: 0 entries
+[2025-10-08 22:29:47] [WARNING] ExecFind: no entries found.
