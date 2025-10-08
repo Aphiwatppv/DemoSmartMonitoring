@@ -1,0 +1,11 @@
+EBS instance: EBSO BKG
+Sourcing /srv/ebsdba/ebsdba/.profile-ebs......
+.profile-ebs has been successfully loaded
+EBS instance: EBSO BKG
+Sourcing /srv/ebsdba/ebsdba/.profile-ebs......
+.profile-ebs has been successfully loaded
+{"t":"f","s":3836,"m":1743477672.4213920000,"p":"/srv/ebsdba/ebsdba/users/deelom/file_search_sorted.py"}
+{"t":"f","s":68613,"m":1757307650.4238400000,"p":"/srv/ebsdba/ebsdba/users/deelom/trigger_20250904.log"}
+{"t":"f","s":79881329,"m":1757553800.0878310000,"p":"/srv/ebsdba/ebsdba/users/deelom/S_20250905145744_3FT2R026R01_S31P_N.st4_005_WFTB33-08_M5355B4SA3E3211"}
+{"t":"f","s":85208113,"m":1757558955.2034690000,"p":"/srv/ebsdba/ebsdba/users/deelom/S_20250904163722_3FT2R026R01_S31P_N.st4_002_WFTB33-08_M5355B4SA3E3211"}
+{"t":"f","s":157917366,"m":1759746323.3834340000,"p":"/srv/ebsdba/ebsdba/users/deelom/S_20251006144415_ZA538161_S21P_N.st4_020_WFTB33-07_M5116BWSH2"}
