@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+import os
+import shutil
+
+def move_files_by_keywords(
+    source_dir: str,
+    dest_dir: str,
+    keywords: list[str],
+    recursive: bool = True
+):
+    matched_files = []
+
+    if recursive:
+        for root, _, files in os.walk(source_dir):
+            for f in files:
+                if any(k.lower() in f.lower() for k in keywords):
+                    matched_files.append(os.path.join(root, f))
+    else:
+        for f in os.listdir(source_dir):
+            full_path = os.path.join(source_dir, f)
+            if os.path.isfile(full_path) and any(k.lower() in f.lower() for k in keywords):
+                matched_files.append(full_path)
+
+    if not matched_files:
+        print("\n❌ No matching files found.")
+        return
+
+    print("\n📄 Files to be moved:")
+    for f in matched_files:
+        print("  -", f)
+
+    print(f"\n📦 Destination: {dest_dir}")
+    confirm = input("\nProceed with moving files? (y/n): ").strip().lower()
+
+    if confirm != "y":
+        print("❌ Operation cancelled.")
+        return
+
+    os.makedirs(dest_dir, exist_ok=True)
+
+    for f in matched_files:
+        try:
+            shutil.move(f, dest_dir)
+        except Exception as e:
+            print(f"⚠️ Failed to move {f}: {e}")
+
+    print(f"\n✅ Moved {len(matched_files)} file(s) successfully.")
+
+def main():
+    source_dir = input("Source directory: ").strip()
+    dest_dir = input("Destination directory: ").strip()
+    keyword_input = input("Enter keywords (comma separated): ").strip()
+
+    keywords = [k.strip() for k in keyword_input.split(",") if k.strip()]
+
+    recursive_input = input("Search recursively? (y/n): ").strip().lower()
+    recursive = recursive_input == "y"
+
+    move_files_by_keywords(source_dir, dest_dir, keywords, recursive)
+
+if __name__ == "__main__":
+    main()
